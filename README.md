@@ -1,17 +1,29 @@
-# @unction/tempLate
+# @unction/mapValues
+
 
 ![Tests][BADGE_TRAVIS]
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> mixed -> mixed
+> (any -> any) -> IterableType -> IterableType
 
-An example function.
+A pretty standard `mapValues()`, but with enforced unary currying.
 
 ``` javascript
-tempLate(1) // 1
+mapValues(
+  (value) => value + 1
+)(
+  [1, 2, 3]
+)
 ```
 
-[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/tempLate.svg?maxAge=2592000&style=flat-square
+Which will return:
+
+``` javascript
+[2, 3, 4]
+```
+
+[BADGE_TRAVIS]: https://img.shields.io/travis/unctionjs/mapValues.svg?maxAge=2592000&style=flat-square
+
 [BADGE_STABILITY]: https://img.shields.io/badge/stability-strong-green.svg?maxAge=2592000&style=flat-square
-[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/tempLate.svg?maxAge=2592000&style=flat-square
+[BADGE_DEPENDENCY]: https://img.shields.io/david/unctionjs/mapValues.svg?maxAge=2592000&style=flat-square

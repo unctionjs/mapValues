@@ -1,7 +1,7 @@
 {
-  "name": "@unction/template",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@unction/mapvalues",
+  "version": "2.0.3",
+  "description": "A regular ol' map over values (fantasy land)",
   "keywords": [
     "unction",
     "functional"
@@ -45,6 +45,6 @@
     "tap": "10.3.3"
   },
   "dependencies": {
-    "ramda": "0.24.1"
+    "@unction/mapvalueswithvaluekey": "^1.0.3"
   }
 }
