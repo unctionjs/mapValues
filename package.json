@@ -55,7 +55,7 @@
     "@unction/mapvalueswithvaluekey": "2.48.0",
     "@unction/mergeright": "3.36.2",
     "@unction/reducevalues": "2.44.0",
-    "xstream": "11.0.0"
+    "xstream": "11.1.0"
   },
   "nyc": {
     "require": [
