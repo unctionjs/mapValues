@@ -28,7 +28,8 @@
     "watch": "chokidar './index.js' './test.js' --command 'npm run ci --silent'"
   },
   "devDependencies": {
-    "@unction/streamsatisfies": "3.50.0",
+    "@unction/streamsatisfies": "5.0.0",
+    "most": "1.7.2",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-eslint": "8.0.3",
@@ -53,11 +54,7 @@
     "tap": "11.0.0"
   },
   "dependencies": {
-    "@unction/fresh": "4.0.0",
-    "@unction/mapvalueswithvaluekey": "2.48.0",
-    "@unction/mergeright": "3.36.2",
-    "@unction/reducevalues": "2.44.0",
-    "xstream": "11.1.0"
+    "@unction/mapvalueswithvaluekey": "2.48.0"
   },
   "nyc": {
     "require": [

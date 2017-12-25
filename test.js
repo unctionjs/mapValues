@@ -1,7 +1,6 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type, flowtype/require-variable-type, no-magic-numbers */
 import {test} from "tap"
-
-import xstream from "xstream"
+import {of} from "most"
 import streamSatisfies from "@unction/streamsatisfies"
 
 import mapValues from "./index"
@@ -90,23 +89,7 @@ test("Stream", ({same, end}) => {
     mapValues(
       (value) => value + 1
     )(
-      xstream.of(29)
-    )
-  )
-})
-
-test("MemoryStream", ({same, end}) => {
-  streamSatisfies(
-    "30---|"
-  )(
-    (given) => (expected) => same(given, expected)
-  )(
-    () => () => end()
-  )(
-    mapValues(
-      (value) => value + 1
-    )(
-      xstream.of(29).remember()
+      of(29)
     )
   )
 })
