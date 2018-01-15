@@ -78,13 +78,19 @@ test("Object", ({same, end}) => {
   end()
 })
 
-test("Stream", ({same, end}) => {
+test("Stream", ({same, doesNotThrow, equal, end}) => {
   streamSatisfies(
     "30---|"
   )(
     (given) => (expected) => same(given, expected)
   )(
-    () => () => end()
+    doesNotThrow
+  )(
+    ({length}) => (size) => {
+      equal(length, size)
+
+      end()
+    }
   )(
     mapValues(
       (value) => value + 1
