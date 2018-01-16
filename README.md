@@ -5,7 +5,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> (any -> any) -> FunctorType -> FunctorType
+> (any => any) => FunctorType => FunctorType
 
 A pretty standard `mapValues()`, but with enforced unary currying.
 
