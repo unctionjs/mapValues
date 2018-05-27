@@ -1,11 +1,10 @@
-import mapValuesWithValueKey from "@unction/mapvalueswithvaluekey"
-
-export default function mapValues (unction: MapFunctionType): UnaryFunctionType {
-  return function mapValuesUnction (functor: FunctorType): FunctorType {
+import mapValuesWithValueKey from "@unction/mapvalueswithvaluekey";
+export default function mapValues(unction) {
+  return function mapValuesUnction(functor) {
     if (functor.map instanceof Function) {
-      return functor.map((value: ValueType): ValueType => unction(value))
+      return functor.map(value => unction(value));
     }
 
-    return mapValuesWithValueKey((value: ValueType): UnaryFunctionType => (): ValueType => unction(value))(functor)
-  }
+    return mapValuesWithValueKey(value => () => unction(value))(functor);
+  };
 }
