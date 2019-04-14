@@ -1,9 +1,9 @@
 /* eslint-disable flowtype/require-variable-type, no-magic-numbers */
-import {test} from "tap"
-import {of} from "most"
-import streamSatisfies from "@unction/streamsatisfies"
+import {test} from "tap";
+import {of} from "most";
+import streamSatisfies from "@unction/streamsatisfies";
 
-import mapValues from "./index"
+import mapValues from "./index";
 
 test("String", ({equal, end}) => {
   equal(
@@ -13,10 +13,10 @@ test("String", ({equal, end}) => {
       "abc"
     ),
     "aaabac"
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test("Set", ({same, end}) => {
   same(
@@ -26,10 +26,10 @@ test("Set", ({same, end}) => {
       new Set([1, 2, 3])
     ),
     new Set([2, 3, 4])
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test("Map", ({same, end}) => {
   same(
@@ -39,10 +39,10 @@ test("Map", ({same, end}) => {
       new Map([[1, 1], [2, 2], [3, 3]])
     ),
     new Map([[1, 2], [2, 3], [3, 4]])
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 
 test("Array", ({same, end}) => {
@@ -53,10 +53,10 @@ test("Array", ({same, end}) => {
       [1, 2, 3]
     ),
     [2, 3, 4]
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test("Object", ({same, end}) => {
   same(
@@ -73,10 +73,10 @@ test("Object", ({same, end}) => {
       age: 30,
       interval: 11,
     }
-  )
+  );
 
-  end()
-})
+  end();
+});
 
 test("Stream", ({same, doesNotThrow, equal, end}) => {
   streamSatisfies(
@@ -87,9 +87,9 @@ test("Stream", ({same, doesNotThrow, equal, end}) => {
     doesNotThrow
   )(
     ({length}) => (size) => {
-      equal(length, size)
+      equal(length, size);
 
-      end()
+      end();
     }
   )(
     mapValues(
@@ -97,5 +97,5 @@ test("Stream", ({same, doesNotThrow, equal, end}) => {
     )(
       of(29)
     )
-  )
-})
+  );
+});
