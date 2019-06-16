@@ -53,8 +53,7 @@
     "tap": "12.6.1"
   },
   "dependencies": {
-    "@unction/mapvalueswithvaluekey": "10.5.0",
-    "core-js": "3.0.1"
+    "@unction/mapvalueswithvaluekey": "10.5.0"
   },
   "nyc": {
     "require": [
