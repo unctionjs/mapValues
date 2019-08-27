@@ -3,7 +3,7 @@ import {test} from "tap";
 import {of} from "most";
 import streamSatisfies from "@unction/streamsatisfies";
 
-import mapValues from "./index";
+import mapValues from "./";
 
 test("String", ({equal, end}) => {
   equal(
