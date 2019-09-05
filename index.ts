@@ -1,10 +1,13 @@
 import mapValuesWithValueKey from "@unction/mapvalueswithvaluekey";
-export default function mapValues (unction) {
-  return function mapValuesUnction (functor) {
-    if (functor.map instanceof Function) {
-      return functor.map((value) => unction(value));
+import {MapperFunctionType} from "./types";
+import {EnumerableType} from "./types";
+
+export default function mapValues<A, B> (mapper: MapperFunctionType<A, B>) {
+  return function mapValuesUnction (enumerable: EnumerableType<A>): EnumerableType<B> {
+    if (enumerable.map instanceof Function) {
+      return enumerable.map((value: A) => mapper(value));
     }
 
-    return mapValuesWithValueKey((value) => () => unction(value))(functor);
+    return mapValuesWithValueKey((value: A) => () => mapper(value))(enumerable);
   };
 }

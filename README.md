@@ -4,7 +4,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> MapperFunctionType => FunctorType => FunctorType
+> MapperFunctionType<A, B> => EnumerableType<A> => EnumerableType<B>
 
 A pretty standard `mapValues()`, but with enforced unary currying.
 
