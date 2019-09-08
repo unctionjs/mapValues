@@ -55,7 +55,7 @@
     "typescript": "3.5.1"
   },
   "dependencies": {
-    "@unction/mapvalueswithvaluekey": "10.6.0"
+    "@unction/mapvalueswithvaluekey": "10.8.0"
   },
   "files": [
     "index.ts",
