@@ -4,7 +4,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> MapperFunctionType<A, B> => EnumerableType<A> => EnumerableType<B>
+> MapperFunctionType<A, B> => Array<A> | Set<A> | RecordType<unknown, A> | string => Array<B> | Set<B> | RecordType<B, unknown> | string
 
 A pretty standard `mapValues()`, but with enforced unary currying.
 
