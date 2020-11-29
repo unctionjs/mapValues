@@ -1,5 +1,4 @@
 module.exports = {
-  "sourceMaps": "inline",
   presets: [
     "@babel/preset-typescript"
   ],
@@ -9,20 +8,26 @@ module.exports = {
   env: {
     main: {
       presets: [
-        ["@babel/preset-env", {useBuiltIns: "usage", corejs: "3.6", targets: {"node": 10}}],
+        ["@babel/preset-env", {"modules": "cjs", useBuiltIns: "usage", corejs: 3, targets: {"node": 14}}],
+        "minify"
+      ]
+    },
+    module: {
+      presets: [
+        ["@babel/preset-env", {"modules": false, useBuiltIns: "usage", corejs: 3, targets: {"node": 14}}],
         "minify"
       ]
     },
     browser: {
+      sourceMaps: "inline",
       presets: [
-        ["@babel/preset-env", {useBuiltIns: "usage", corejs: "3.6"}],
+        ["@babel/preset-env", {useBuiltIns: "usage", corejs: 3}],
         "minify"
       ]
     },
     test:{
       presets: [
-        ["@babel/preset-env", {useBuiltIns: "usage", corejs: "3.6", targets: {"node": "current"}}],
-        "minify"
+        ["@babel/preset-env", {useBuiltIns: "usage", corejs: 3, targets: {"node": "current"}}]
       ],
       "plugins": [
         "annotate-console-log"
