@@ -2,7 +2,7 @@ import mapValuesWithValueKey from "@unction/mapvalueswithvaluekey";
 import {MapperFunctionType} from "./types";
 
 export default function mapValues<A, B> (mapper: MapperFunctionType<A, B>) {
-  return function mapValuesUnction (enumerable: Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string): Array<B> | Set<B> | RecordType<B, unknown> | string {
+  return function mapValuesUnction (enumerable: Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string): Array<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string {
     if (enumerable.map instanceof Function) {
       return enumerable.map((value: A) => mapper(value));
     }
