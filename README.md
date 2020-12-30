@@ -4,7 +4,9 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string
+``` typescript
+MapperFunctionType<A, B> => Array<A> | Set<A> | Record<string | number | symbol, B> | Map<B, A> | string => Array<B> | Set<B> | Record<string | number | symbol, unknown> | Map<B, unknown> | string
+```
 
 A pretty standard `mapValues()`, but with enforced unary currying.
 
